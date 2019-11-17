@@ -92,7 +92,7 @@
 <meta property="og:site_name" content="KitKat ๑">
 <meta property="og:description" content="这是一篇在我了解范围内的网络知识的整理 主要用于自己必要时可以查看不必再去百度相关知识">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-11-02T01:59:40.827Z">
+<meta property="og:updated_time" content="2019-11-17T08:04:14.500Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="网络知识整理">
 <meta name="twitter:description" content="这是一篇在我了解范围内的网络知识的整理 主要用于自己必要时可以查看不必再去百度相关知识">
@@ -192,16 +192,6 @@
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
             归档
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-categories">
-          <a href="/categories" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
-            
-            分类
           </a>
         </li>
       
@@ -512,11 +502,6 @@
           
 
           
-            <span class="post-meta-divider">|</span>
-            <span class="page-pv">热度
-            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>℃
-            </span>
-          
 
           
 
@@ -525,9 +510,9 @@
 		
 		  <span class="post-letters-count">
 		  &nbsp; | &nbsp;
-		  <span>232 字</span>
+		  <span>509 字</span>
 		  &nbsp; | &nbsp;
-		  <span>1 min</span>
+		  <span>2 min</span>
 		  </span>
 		
         </div>
@@ -543,16 +528,29 @@
         <p>这是一篇在我了解范围内的网络知识的整理</p>
 <p>主要用于自己必要时可以查看不必再去百度相关知识</p>
 <a id="more"></a>
-<p><strong>相关篇：</strong></p>
-<p><strong>1、TCP与UDP</strong></p>
-<blockquote>
+<h2 id="对应篇"><a href="#对应篇" class="headerlink" title="对应篇:"></a><strong>对应篇:</strong></h2><h3 id="OSI七层模型各层对应的协议"><a href="#OSI七层模型各层对应的协议" class="headerlink" title="OSI七层模型各层对应的协议"></a><strong>OSI七层模型各层对应的协议</strong></h3><p>物理层：EIA/TIA RS-232、EIA/TIA RS-449、V.35、RJ-45</p>
+<p>数据链路层：SDLC、HDLC、PPP、STP(Spanning Tree Protocol)、帧中继</p>
+<p>网络层：IP、IPX、ICMP、RIP、OSPF(开放式最短路径优先)</p>
+<p>传输层：TCP、UDP、SPX</p>
+<p>会话层：Socket、NFS、SQL、RPC、X-WINDOWS、ASP(APPTALK会话协议)、SCP</p>
+<p>表示层：ASCII、EBCDIC;TIFF、JPEG、GIF、PICT;MIDI、MPEG、QUICKTIME</p>
+<p>应用层：TELNET、FTP、TFTP、SMTP、SNMP、HTTP、BOOTP、DHCP、DNS(DNS使用的传输协议既可以是TCP又可以是UDP)</p>
+<h3 id="各层对应的设备"><a href="#各层对应的设备" class="headerlink" title="各层对应的设备"></a><strong>各层对应的设备</strong></h3><p>物理层：网卡、网线、中继器、集线器(Hub)</p>
+<p>数据链路层：网桥、交换机</p>
+<p>网络层：路由器</p>
+<p>高层互联：网关/应用层网关(即应用网关)</p>
+<h2 id="相关篇："><a href="#相关篇：" class="headerlink" title="相关篇："></a><strong>相关篇：</strong></h2><h3 id="1、TCP与UDP与IP"><a href="#1、TCP与UDP与IP" class="headerlink" title="1、TCP与UDP与IP"></a><strong>1、TCP与UDP与IP</strong></h3><blockquote>
 <p>TCP(传输控制协议)：</p>
 </blockquote>
-<p>是 <strong>面向连接的</strong>、<strong>可靠的</strong> 字节流协议;为提供可靠性传输,实行”顺序控制”和”重发控制”机制。此外还具备”流控制(流量控制)”、”拥塞控制”、提高网络利用率;TCP提供 <strong>超时重发</strong> 机制，能 <strong>保证数据从一端到另一端</strong>。</p>
+<p>是 <strong>面向连接的、可靠的</strong> 字节流协议;为提供可靠性传输,实行”顺序控制”和”重发控制”机制。此外还具备”流控制(流量控制)”、”拥塞控制”、提高网络利用率;TCP提供 <strong>超时重发</strong> 机制,能 <strong>保证数据从一端到另一端</strong>。</p>
 <blockquote>
 <p>UDP(用户数据报协议)：</p>
 </blockquote>
 <p>是一个简单的面向数据包的运输层协议, <strong>不提供可靠性</strong>、<strong>不是面向连接</strong>;可以确保发送消息的大小,却 <strong>不能保证消息一定会到达目的地</strong>。因为不面向连接,所以 <strong>没有超时重发</strong> 等机制,故 <strong>传输速度非常快</strong>。</p>
+<blockquote>
+<p>IP(网际互联协议)：</p>
+</blockquote>
+<p>是一个 <strong>无连接的、不可靠的、点对点</strong> 的协议,效率很高，实现起来也很简单，因为IP协议采用了 <strong>尽力 (Best Effort) 传输</strong> 数据的思想, <strong>不能</strong> 保证数据的到达。对于分组丢失、分组无序和重新传送等问题IP都 <strong>不做</strong> 检测,因此会有和TCP的搭配使用。</p>
 <blockquote class="blockquote-center">日子还很长 坚持就好</blockquote>
 
 
@@ -648,8 +646,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/avatar/avatar.png"
@@ -748,6 +755,22 @@
       </section>
 
       
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#对应篇"><span class="nav-number">1.</span> <span class="nav-text">对应篇:</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#OSI七层模型各层对应的协议"><span class="nav-number">1.1.</span> <span class="nav-text">OSI七层模型各层对应的协议</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#各层对应的设备"><span class="nav-number">1.2.</span> <span class="nav-text">各层对应的设备</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#相关篇："><span class="nav-number">2.</span> <span class="nav-text">相关篇：</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1、TCP与UDP与IP"><span class="nav-number">2.1.</span> <span class="nav-text">1、TCP与UDP与IP</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
 
       
 
@@ -785,19 +808,7 @@
   <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
   
-    <span class="site-uv">
-      您是第
-      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
-      个小伙伴
-    </span>
-  
 
-  
-    <span class="site-pv">
-      本站总浏览
-      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
-      次
-    </span>
   
 </div>
 
