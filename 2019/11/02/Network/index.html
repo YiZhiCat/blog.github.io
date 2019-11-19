@@ -92,7 +92,7 @@
 <meta property="og:site_name" content="KitKat ๑">
 <meta property="og:description" content="这是一篇在我了解范围内的网络知识的整理 主要用于自己必要时可以查看不必再去百度相关知识">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-11-18T09:02:03.415Z">
+<meta property="og:updated_time" content="2019-11-19T08:28:17.837Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="网络知识整理">
 <meta name="twitter:description" content="这是一篇在我了解范围内的网络知识的整理 主要用于自己必要时可以查看不必再去百度相关知识">
@@ -510,9 +510,9 @@
 		
 		  <span class="post-letters-count">
 		  &nbsp; | &nbsp;
-		  <span>1,018 字</span>
+		  <span>1,491 字</span>
 		  &nbsp; | &nbsp;
-		  <span>4 min</span>
+		  <span>5 min</span>
 		  </span>
 		
         </div>
@@ -573,6 +573,19 @@
 <p>OSPF最主要的特点是 <strong>使用分布式的链路状态协议</strong> 。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">OSPF协议特点:</span><br><span class="line">(1)向本自治系统中所有路由器发送信息</span><br><span class="line">(2)只有在链路状态发生变化时,路由器才向所有路由器用洪泛法发送此信息</span><br><span class="line">(3)发送的信息就是与本路由器相邻的所有路由器的链路状态,但这只是路由器所知道的部分信息</span><br></pre></td></tr></table></figure>
 <p>————————————————————————————————————————————————————Biu</p>
+<h3 id="3、ARP与RARP"><a href="#3、ARP与RARP" class="headerlink" title="3、ARP与RARP"></a><strong>3、ARP与RARP</strong></h3><blockquote>
+<p>ARP(地址解析协议):</p>
+</blockquote>
+<p>是通过 <strong>报文</strong> 工作的,是 <strong>根据IP地址获取物理地址</strong> 的一个TCP/IP协议(超级常用于IPv4, <strong>NDP</strong> 用于在IPv6中代替ARP)</p>
+<p>ARP命令可用于 <strong>查询本机ARP缓存中IP地址和MAC地址的对应关系、添加或删除静态对应关系</strong> 等。</p>
+<p>ARP是建立在 <strong>网络中各个主机互相信任的基础上</strong> 的,局域网络上的主机可以自主发送ARP应答消息,其他主机收到应答报文时 <strong>不会检测</strong> 该报文的真实性就会将其记入本机ARP缓存 ————&gt; 由此攻击者就可以向某一主机发送伪ARP应答报文,使其发送的信息无法到达预期的主机或到达错误的主机,这就构成了一个 <strong>ARP欺骗</strong> </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">详细过程:</span><br><span class="line">主机发送信息时将包含目标IP地址的ARP请求广播到局域网络上的所有主机,并接收返回消息,以此确定目标的物理地址;</span><br><span class="line">收到返回消息后将该IP地址和物理地址存入本机ARP缓存中并保留一定时间,下次请求时直接查询ARP缓存以节约资源。</span><br></pre></td></tr></table></figure>
+<p>Biu————————————————————————————————————————————————————</p>
+<blockquote>
+<p>RARP(反向地址转换协议)</p>
+</blockquote>
+<p>允许局域网的物理机器 <strong>从网关服务器的ARP表或者缓存上请求其IP地址</strong> ——&gt; 网络管理员在局域网网关路由器里创建一个表以映射物理地址(MAC)和与其对应的IP地址。</p>
+<p>当设置一台新的机器时,其RARP客户机程序需要向路由器上的RARP服务器请求相应IP地址。假设在路由表中已经设置了一个记录,RARP服务器将会返回IP地址给机器,此机器就会存储起来以便日后使用。</p>
 <blockquote class="blockquote-center">日子还很长 坚持就好</blockquote>
 
 
@@ -786,7 +799,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#对应篇"><span class="nav-number">1.</span> <span class="nav-text">对应篇:</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#OSI七层模型各层对应的协议"><span class="nav-number">1.1.</span> <span class="nav-text">OSI七层模型各层对应的协议</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#各层对应的设备"><span class="nav-number">1.2.</span> <span class="nav-text">各层对应的设备</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#相关篇："><span class="nav-number">2.</span> <span class="nav-text">相关篇：</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1、TCP与UDP与IP"><span class="nav-number">2.1.</span> <span class="nav-text">1、TCP与UDP与IP</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2、RIP与OSPF"><span class="nav-number">2.2.</span> <span class="nav-text">2、RIP与OSPF</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#对应篇"><span class="nav-number">1.</span> <span class="nav-text">对应篇:</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#OSI七层模型各层对应的协议"><span class="nav-number">1.1.</span> <span class="nav-text">OSI七层模型各层对应的协议</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#各层对应的设备"><span class="nav-number">1.2.</span> <span class="nav-text">各层对应的设备</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#相关篇："><span class="nav-number">2.</span> <span class="nav-text">相关篇：</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1、TCP与UDP与IP"><span class="nav-number">2.1.</span> <span class="nav-text">1、TCP与UDP与IP</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2、RIP与OSPF"><span class="nav-number">2.2.</span> <span class="nav-text">2、RIP与OSPF</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3、ARP与RARP"><span class="nav-number">2.3.</span> <span class="nav-text">3、ARP与RARP</span></a></li></ol></li></ol></div>
             
 
           </div>
